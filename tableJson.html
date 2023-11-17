@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .table th {
+            border: 1px solid red;
+        }
+
+        .table td {
+            border: 1px solid red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Match Type</th>
+                <th>Date</th>
+                <th>Participated Country</th>
+                <th>Man of the match</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!--
+            <tr>
+                <td>
+                    Jhon Doe
+                </td>
+                <td>
+                    Jhon Doe
+                </td>
+               
+            </tr>
+             <tr>
+                <td>
+                    Jhon Doe
+                </td>
+                <td>
+                    Jhon Doe
+                </td>
+               
+            </tr>
+         -->
+
+        </tbody>
+    </table>
+
+    <script>
+        var obj = [
+            {
+                "matchType": "semi-finals",
+                "date": "10/12/2023",
+                "participate": "New York",
+                "man": "Atik"
+            },
+            {
+                "matchType": "semi-finals",
+                "date": "10/12/2023",
+                "participate": "New York",
+                "man": "Atik"
+            },
+            {
+                "matchType": "semi-finals",
+                "date": "10/12/2023",
+                "participate": "New York",
+                "man": "Atik"
+            },
+            {
+                "matchType": "semi-finals",
+                "date": "10/12/2023",
+                "participate": "New York",
+                "man": "Atik"
+            },
+
+
+        ];
+
+        var tableBody = document.getElementById("tableBody");
+
+
+        obj.forEach(function (person) {
+            var row = document.createElement("tr");
+
+            var nameCell = document.createElement("td");
+            nameCell.innerText = person.matchType;
+            row.appendChild(nameCell);
+
+            var ageCell = document.createElement("td");
+            ageCell.innerText = person.date;
+            row.appendChild(ageCell);
+
+            var cityCell = document.createElement("td");
+            cityCell.innerText = person.participate;
+            row.appendChild(cityCell);
+
+            var manData = document.createElement("td");
+            manData.innerText = person.man;
+            row.appendChild(manData);
+
+
+            tableBody.appendChild(row);
+        });
+    </script>
+</body>
+
+</html>
