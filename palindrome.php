@@ -15,3 +15,5 @@ if ($num == $sum) {
     echo "Not a Palindrome Number\n";
 }
 ?>
+
+<!-- strrev() -->

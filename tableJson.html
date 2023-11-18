@@ -7,12 +7,16 @@
     <title>Document</title>
 
     <style>
-        .table th {
-            border: 1px solid red;
+        table {
+            width: 100%;
+            border: 1.5px solid;
+            border-collapse: collapse;
         }
 
-        .table td {
-            border: 1px solid red;
+        th,
+        td {
+            border: 1.5px solid;
+            text-align: center;
         }
     </style>
 
@@ -54,39 +58,42 @@
     </table>
 
     <script>
-        var obj = [
-            {
-                "matchType": "semi-finals",
-                "date": "10/12/2023",
-                "participate": "New York",
-                "man": "Atik"
-            },
-            {
-                "matchType": "semi-finals",
-                "date": "10/12/2023",
-                "participate": "New York",
-                "man": "Atik"
-            },
-            {
-                "matchType": "semi-finals",
-                "date": "10/12/2023",
-                "participate": "New York",
-                "man": "Atik"
-            },
-            {
-                "matchType": "semi-finals",
-                "date": "10/12/2023",
-                "participate": "New York",
-                "man": "Atik"
-            },
+        var obj = {
+            "matches":
+                [
+                    {
+                        "matchType": "semi-finals",
+                        "date": "10/12/2023",
+                        "participate": "New York",
+                        "man": "Atik"
+                    },
+                    {
+                        "matchType": "semi-finals",
+                        "date": "10/12/2023",
+                        "participate": "New York",
+                        "man": "Atik"
+                    },
+                    {
+                        "matchType": "semi-finals",
+                        "date": "10/12/2023",
+                        "participate": "New York",
+                        "man": "Atik"
+                    },
+                    {
+                        "matchType": "semi-finals",
+                        "date": "10/12/2023",
+                        "participate": "New York",
+                        "man": "Atik"
+                    },
 
 
-        ];
+                ]
+        }
 
         var tableBody = document.getElementById("tableBody");
 
 
-        obj.forEach(function (person) {
+        obj.matches.forEach(person => {
             var row = document.createElement("tr");
 
             var nameCell = document.createElement("td");
